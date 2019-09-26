@@ -6,7 +6,6 @@ const commonjs = require('rollup-plugin-commonjs') // transform commonjs to esm
 const babel = require('rollup-plugin-babel')
 const replace = require('rollup-plugin-replace')
 const typescript = require('rollup-plugin-typescript')
-const builtins = require('rollup-plugin-node-builtins')
 
 module.exports = {
   external: [
@@ -23,8 +22,12 @@ module.exports = {
         process.env.NODE_ENV || 'development'
       ),
     }),
-    builtins(),
-    resolve(),
+    resolve({
+      jsnext: true,  // 该属性是指定将Node包转换为ES2015模块
+      // main 和 browser 属性将使插件决定将那些文件应用到bundle中
+      main: true,  // Default: true 
+      browser: true // Default: false
+    }),
     json(),
     typescript(),
     eslint({

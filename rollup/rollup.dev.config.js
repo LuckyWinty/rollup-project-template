@@ -24,20 +24,12 @@ module.exports = {
     html({
       template:  path.resolve(__dirname, `../src/${componentName}/example/index.html`),
       filename: 'index.html',
-      dest:path.resolve(__dirname, `../src/${componentName}/example`),
-      inject: 'head',
-      externals: [
-        { type: 'js', 
-        file: path.resolve(
-          __dirname,
-          `../src/${componentName}/dist/index.js`
-        ), pos: 'before' },
-    ]
+      dest: path.resolve(__dirname, `../src/${componentName}/dist`),
     }),
     serve({
       port,
       open: true,
-      contentBase: path.resolve(__dirname, `../src/${componentName}/example`),
+      contentBase: path.resolve(__dirname, `../src/${componentName}/dist`),
       historyApiFallback: true, // Set to true to return index.html instead of 404
       host: 'localhost',
     })
