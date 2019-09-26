@@ -3,6 +3,7 @@
 dist
 .vscode
 coverage
+
 src/*/dist
 src/*/node_modules
 src/*/coverage
