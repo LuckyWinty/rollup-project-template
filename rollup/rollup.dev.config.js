@@ -4,7 +4,7 @@ const baseConf = require('./rollup.base')
 const html = require('rollup-plugin-bundle-html')
 
 const componentName = process.env.COMPONENT
-const port = process.env.PORT || 8088
+const port = process.env.PORT || 10001
 const componentType = process.env.COMPONENT_TYPE || 'js'
 
 module.exports = {

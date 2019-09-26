@@ -8,15 +8,7 @@
     "lint:fix": "eslint --fix  . --ext .js,.jsx,ts",
     "lint": "eslint . --ext .js,.jsx,ts"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/LuckyWinty/ToolLibrary.git"
-  },
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/LuckyWinty/ToolLibrary/issues"
-  },
-  "homepage": "https://github.com/LuckyWinty/ToolLibrary#readme",
   "devDependencies": {
     "@babel/core": "^7.4.3",
     "@babel/plugin-proposal-class-properties": "^7.4.0",
